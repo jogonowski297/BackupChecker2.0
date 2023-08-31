@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BackupChecker.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Title" Type="System.String" Scope="User">
+      <Value Profile="(Default)">NOwy tutul</Value>
+    </Setting>
+    <Setting Name="Button" Type="System.String" Scope="User">
+      <Value Profile="(Default)">nowy przycisk</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
