@@ -9,33 +9,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Xml.Linq;
+using System.Xml;
 
 namespace BackupChecker
 {
     public partial class Form_Paths : UserControl
     {
         XDocument config;
-        string configFile = "appconfig.xml";
 
-        public Form_Paths()
+        public Form_Paths(XDocument config)
         {
             InitializeComponent();
-            if (File.Exists(configFile))
-            {
-                string path = Path.GetFullPath(configFile);
-                config = XDocument.Load("appconfig.xml");
-            }
-            else
-            {
-                // Tworzenie nowego pliku, jeśli nie istnieje
-                XDocument newXmlDoc = new XDocument(
-                    new XElement("configuration",
-                        new XElement("appSettings")
-                    )
-                );
 
-                newXmlDoc.Save(configFile);
-            }
+            this.config = config;
+
+            LoadToList();
 
         }
 
@@ -75,7 +63,24 @@ namespace BackupChecker
             }
         }
 
+        private void LoadToList()
+        {
+            var dataElements = config.Descendants("data");
 
+            // Iteruj przez elementy "data"
+            foreach (var dataElement in dataElements)
+            {
+                // Pobierz wartości ścieżki i nazwy
+                string dirPath = dataElement.Element("dirPath").Value;
+                string name = dataElement.Element("name").Value;
+
+                // Tworzenie tekstu do wyświetlenia w ListBox
+                string listItemText = $"{dirPath} - {name}";
+
+                // Dodawanie pozycji do ListBox
+                listBox1.Items.Add(listItemText);
+            }
+        }
 
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -91,7 +96,7 @@ namespace BackupChecker
         {
             string path = textBox1.Text;
 
-            XElement appSettingsNode = config.Descendants("appSettings").FirstOrDefault();
+            XElement appSettingsNode = config.Descendants("directory").FirstOrDefault();
 
             /// sprawdzanie czy istnieje taka sama sciezka w pliku 
             bool pathExist = config.Descendants("dirPath")
@@ -99,22 +104,15 @@ namespace BackupChecker
 
             if (appSettingsNode != null && !pathExist)
             {
-                appSettingsNode.Add(new XElement("dirPath", textBox1.Text));
+                appSettingsNode.Add(new XElement("data",
+                                        new XElement("dirPath", textBox1.Text),
+                                        new XElement("name", textBox2.Text)));
+
                 config.Save("appconfig.xml");
             }
-
-
         }
 
-        private void Load_Click(object sender, EventArgs e)
-        {
-            XElement secondDirPathNode = config.Descendants("dirPath").ElementAtOrDefault(1);
-            if (secondDirPathNode != null)
-            {
-                textBox2.Text = "DSADASD";
 
-            }
-        }
 
 
     }

@@ -4,7 +4,13 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form_Paths.cs">
+    <Compile Update="UserControls\Form_Paths.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\UC_Help.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UserControls\UC_Settings.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

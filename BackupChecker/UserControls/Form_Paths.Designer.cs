@@ -41,13 +41,11 @@
             label2 = new Label();
             label1 = new Label();
             colorDialog1 = new ColorDialog();
-            Load = new Button();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel2
             // 
-            panel2.Controls.Add(Load);
             panel2.Controls.Add(label5);
             panel2.Controls.Add(listBox1);
             panel2.Controls.Add(label4);
@@ -60,7 +58,7 @@
             panel2.Controls.Add(label1);
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(846, 461);
+            panel2.Size = new Size(859, 473);
             panel2.TabIndex = 1;
             // 
             // label5
@@ -75,6 +73,7 @@
             // 
             // listBox1
             // 
+            listBox1.BackColor = SystemColors.InactiveCaption;
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 15;
             listBox1.Location = new Point(27, 215);
@@ -159,22 +158,12 @@
             label1.TabIndex = 0;
             label1.Text = "Kopia Windows-Servers";
             // 
-            // Load
-            // 
-            Load.Location = new Point(448, 185);
-            Load.Name = "Load";
-            Load.Size = new Size(75, 23);
-            Load.TabIndex = 10;
-            Load.Text = "Wczytaj";
-            Load.UseVisualStyleBackColor = true;
-            Load.Click += Load_Click;
-            // 
-            // Form_Paths
+            // Form_Paths_Directory
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panel2);
-            Name = "Form_Paths";
+            Name = "Form_Paths_Directory";
             Size = new Size(859, 473);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
@@ -195,6 +184,5 @@
         private ColorDialog colorDialog1;
         public Button button1;
         public TextBox textBox1;
-        private Button Load;
     }
 }

@@ -1,10 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <configuration>
   <appSettings>
-    <dirPath>C:\New\Path12</dirPath>
-    <dirPath>C:\New\Path12</dirPath>
-    <dirPath>D:\C#\WindowsForms\BackupChecker\BackupChecker\BackupChecker\obj\Debug\net6.0-windows</dirPath>
-    <dirPath>D:\C#\WindowsForms\BackupChecker\BackupChecker\BackupChecker\obj\Debug\net6.0-windows</dirPath>
-    <dirPath>D:\C#\WindowsForms\BackupChecker\BackupChecker\BackupChecker\obj\Debug\net6.0-windows</dirPath>
+    <settings>
+      <company>Adarp1</company>
+      <email></email>
+      <hour>21</hour>
+      <minute>37</minute>
+      <smtp></smtp>
+      <port></port>
+      <username></username>
+      <password></password>
+      <ssl></ssl>
+    </settings>
+    <directory>
+      <data>
+        <dirPath>C:\Users\kgwzd\Documents\Visual Studio 2022\Templates</dirPath>
+        <name>xxx</name>
+      </data>
+      <data>
+        <dirPath>C:\Users\kgwzd\Documents\Visual Studio 2022\Visualizers</dirPath>
+        <name>xxx2</name>
+      </data>
+    </directory>
   </appSettings>
 </configuration>

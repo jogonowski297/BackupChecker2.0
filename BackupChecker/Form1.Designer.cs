@@ -45,9 +45,9 @@
             button7 = new Button();
             button6 = new Button();
             button5 = new Button();
+            panelContainer = new Panel();
             panel7 = new Panel();
-            label1 = new Label();
-            form_Paths1 = new Form_Paths();
+            btnHelp = new Button();
             Sidebar.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)menuButton).BeginInit();
@@ -67,6 +67,7 @@
             Sidebar.Controls.Add(panel4);
             Sidebar.Controls.Add(panel3);
             Sidebar.Controls.Add(panel2);
+            Sidebar.Controls.Add(panel7);
             Sidebar.Dock = DockStyle.Left;
             Sidebar.Location = new Point(0, 0);
             Sidebar.MaximumSize = new Size(199, 450);
@@ -137,8 +138,9 @@
             button3.Name = "button3";
             button3.Size = new Size(173, 41);
             button3.TabIndex = 1;
-            button3.Text = "Home";
+            button3.Text = "Settings";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // panel3
             // 
@@ -193,10 +195,9 @@
             panel5.Controls.Add(button7);
             panel5.Controls.Add(button6);
             panel5.Controls.Add(button5);
-            panel5.Controls.Add(panel7);
-            panel5.Location = new Point(205, 0);
+            panel5.Location = new Point(667, 3);
             panel5.Name = "panel5";
-            panel5.Size = new Size(596, 47);
+            panel5.Size = new Size(134, 44);
             panel5.TabIndex = 1;
             // 
             // button7
@@ -205,7 +206,7 @@
             button7.FlatAppearance.BorderSize = 0;
             button7.FlatAppearance.MouseOverBackColor = Color.Red;
             button7.FlatStyle = FlatStyle.Flat;
-            button7.Location = new Point(461, 0);
+            button7.Location = new Point(-1, 0);
             button7.Name = "button7";
             button7.Size = new Size(44, 47);
             button7.TabIndex = 3;
@@ -218,7 +219,7 @@
             button6.FlatAppearance.BorderSize = 0;
             button6.FlatAppearance.MouseOverBackColor = Color.Red;
             button6.FlatStyle = FlatStyle.Flat;
-            button6.Location = new Point(511, 0);
+            button6.Location = new Point(49, 0);
             button6.Name = "button6";
             button6.Size = new Size(44, 47);
             button6.TabIndex = 2;
@@ -231,40 +232,43 @@
             button5.FlatAppearance.BorderSize = 0;
             button5.FlatAppearance.MouseOverBackColor = Color.Red;
             button5.FlatStyle = FlatStyle.Flat;
-            button5.Location = new Point(552, 0);
+            button5.Location = new Point(90, 0);
             button5.Name = "button5";
-            button5.Size = new Size(44, 47);
+            button5.Size = new Size(44, 44);
             button5.TabIndex = 1;
             button5.Text = "close";
             button5.UseVisualStyleBackColor = true;
             button5.Click += button5_Click;
             // 
+            // panelContainer
+            // 
+            panelContainer.Location = new Point(206, 53);
+            panelContainer.Name = "panelContainer";
+            panelContainer.Size = new Size(582, 397);
+            panelContainer.TabIndex = 2;
+            // 
             // panel7
             // 
-            panel7.Controls.Add(label1);
-            panel7.Location = new Point(163, 0);
+            panel7.Controls.Add(btnHelp);
+            panel7.Location = new Point(3, 304);
             panel7.Name = "panel7";
-            panel7.Size = new Size(273, 47);
-            panel7.TabIndex = 0;
+            panel7.Size = new Size(196, 48);
+            panel7.TabIndex = 5;
             // 
-            // label1
+            // btnHelp
             // 
-            label1.Anchor = AnchorStyles.Left;
-            label1.AutoSize = true;
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(0, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(132, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Student addmision font";
-            // 
-            // form_Paths1
-            // 
-            form_Paths1.Location = new Point(206, 53);
-            form_Paths1.Margin = new Padding(3, 4, 3, 4);
-            form_Paths1.Name = "form_Paths1";
-            form_Paths1.Size = new Size(597, 397);
-            form_Paths1.TabIndex = 2;
+            btnHelp.FlatAppearance.BorderSize = 0;
+            btnHelp.FlatStyle = FlatStyle.Flat;
+            btnHelp.ForeColor = SystemColors.ButtonHighlight;
+            btnHelp.Image = Properties.Resources.heart;
+            btnHelp.ImageAlign = ContentAlignment.MiddleLeft;
+            btnHelp.Location = new Point(14, 4);
+            btnHelp.Name = "btnHelp";
+            btnHelp.Size = new Size(173, 41);
+            btnHelp.TabIndex = 2;
+            btnHelp.Text = "Help";
+            btnHelp.UseVisualStyleBackColor = true;
+            btnHelp.Click += btnHelp_Click;
             // 
             // Form1
             // 
@@ -272,12 +276,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkOliveGreen;
             ClientSize = new Size(800, 450);
-            Controls.Add(form_Paths1);
+            Controls.Add(panelContainer);
             Controls.Add(panel5);
             Controls.Add(Sidebar);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
+            MouseDown += Form1_MouseDown;
+            MouseMove += Form1_MouseMove;
+            MouseUp += Form1_MouseUp;
             Sidebar.ResumeLayout(false);
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)menuButton).EndInit();
@@ -287,7 +294,6 @@
             panel2.ResumeLayout(false);
             panel5.ResumeLayout(false);
             panel7.ResumeLayout(false);
-            panel7.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -307,10 +313,10 @@
         private System.Windows.Forms.Timer SidebarTimer;
         private Panel panel5;
         private Button button5;
-        private Panel panel7;
-        private Label label1;
         private Button button7;
         private Button button6;
-        private Form_Paths form_Paths1;
+        private Panel panelContainer;
+        private Panel panel7;
+        private Button btnHelp;
     }
 }
