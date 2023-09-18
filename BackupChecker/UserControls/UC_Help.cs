@@ -22,13 +22,20 @@ namespace BackupChecker.UserControls
         {
             InitializeComponent();
 
+            version.Text = "1.0.5";
+        }
 
+        private void check_Click(object sender, EventArgs e)
+        {
             WebClient webClient = new WebClient();
             var client = new WebClient();
 
-            if (!webClient.DownloadString("https://github.com/jogonowski297/BackupChecker2.0/releases/download/Update/Update.txt").Contains("1.0.0"))
+            bool x = webClient.DownloadString("https://github.com/jogonowski297/BackupChecker2.0/blob/master/README.md").Contains("1.0.5");
+
+            if (!x)
             {
-                if(MessageBox.Show("New update available! Do you want to install it?","DemoApp", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                MessageBox.Show("w IF");
+                if (MessageBox.Show("New update available! Do you want to install it?", "DemoApp", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     try
                     {
@@ -51,8 +58,6 @@ namespace BackupChecker.UserControls
 
                 }
             }
-
-
         }
     }
 }

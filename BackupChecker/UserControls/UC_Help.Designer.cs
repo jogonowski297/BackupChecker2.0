@@ -31,6 +31,8 @@
             check = new Button();
             versionConst = new Label();
             version = new Label();
+            button1 = new Button();
+            checkBox1 = new CheckBox();
             SuspendLayout();
             // 
             // check
@@ -41,6 +43,7 @@
             check.TabIndex = 0;
             check.Text = "Check";
             check.UseVisualStyleBackColor = true;
+            check.Click += check_Click;
             // 
             // versionConst
             // 
@@ -59,10 +62,31 @@
             version.Size = new Size(0, 15);
             version.TabIndex = 2;
             // 
+            // button1
+            // 
+            button1.Location = new Point(232, 253);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 3;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            checkBox1.AutoSize = true;
+            checkBox1.Location = new Point(259, 298);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(83, 19);
+            checkBox1.TabIndex = 4;
+            checkBox1.Text = "checkBox1";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
             // UC_Help
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(checkBox1);
+            Controls.Add(button1);
             Controls.Add(version);
             Controls.Add(versionConst);
             Controls.Add(check);
@@ -77,5 +101,7 @@
         private Button check;
         private Label versionConst;
         private Label version;
+        private Button button1;
+        private CheckBox checkBox1;
     }
 }

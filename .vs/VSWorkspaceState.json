@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\BackupChecker",
+    "\\BackupChecker\\UserControls"
   ],
-  "SelectedNode": "\\BackupChecker.sln",
+  "SelectedNode": "\\BackupChecker\\UserControls\\UC_Help.cs",
   "PreviewInSolutionExplorer": false
 }
