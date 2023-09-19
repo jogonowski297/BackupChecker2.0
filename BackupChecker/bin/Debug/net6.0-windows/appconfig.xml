@@ -21,6 +21,44 @@
         <dirPath>C:\Users\kgwzd\Documents\Visual Studio 2022\Visualizers</dirPath>
         <name>xxx2</name>
       </data>
+      <data>
+        <dirPath></dirPath>
+        <name></name>
+        <selectedDays>System.Windows.Forms.CheckBox, CheckState: 1System.Windows.Forms.CheckBox, CheckState: 1</selectedDays>
+      </data>
+      <data>
+        <dirPath>C:\Users\jakub.ogonowski\Documents\IISExpress\TraceLogFiles</dirPath>
+        <name>dd</name>
+        <selectedDays>System.Windows.Forms.CheckBox, CheckState: 1System.Windows.Forms.CheckBox, CheckState: 1</selectedDays>
+      </data>
+      <data>
+        <dirPath>C:\Users\jakub.ogonowski\Documents\IISExpress</dirPath>
+        <name></name>
+        <selectedDays>WtorekŚroda</selectedDays>
+      </data>
+      <data>
+        <dirPath>C:\Users\jakub.ogonowski\Documents\IISExpress\config</dirPath>
+        <name></name>
+        <selectedDays>
+          <day>Środa</day>
+          <day>Czwartek</day>
+          <day>Sobota</day>
+        </selectedDays>
+      </data>
+      <data>
+        <dirPath>C:\Users\jakub.ogonowski\Documents\Visual Studio 2008</dirPath>
+        <name>VS2008</name>
+        <difference>3</difference>
+        <selectedDays>
+          <day>Poniedziałek</day>
+          <day>Wtorek</day>
+          <day>Środa</day>
+          <day>Czwartek</day>
+          <day>Piątek</day>
+          <day>Sobota</day>
+          <day>Niedziela</day>
+        </selectedDays>
+      </data>
     </directory>
   </appSettings>
 </configuration>

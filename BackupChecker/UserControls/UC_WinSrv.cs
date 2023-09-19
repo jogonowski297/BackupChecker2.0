@@ -13,11 +13,11 @@ using System.Xml;
 
 namespace BackupChecker
 {
-    public partial class Form_Paths : UserControl
+    public partial class UC_WinSrv : UserControl
     {
         XDocument config;
 
-        public Form_Paths(XDocument config)
+        public UC_WinSrv(XDocument config)
         {
             InitializeComponent();
 
@@ -98,22 +98,57 @@ namespace BackupChecker
 
             XElement appSettingsNode = config.Descendants("directory").FirstOrDefault();
 
+            XElement xmlRoot = new XElement("selectedDays");
+
+            List<CheckBox> checkBoxList = new List<CheckBox>
+            {
+                ChBMo,
+                ChBTu,
+                ChBWe,
+                ChBTh,
+                ChBFr,
+                ChBSa,
+                ChBSu
+            };
+
+
             /// sprawdzanie czy istnieje taka sama sciezka w pliku 
             bool pathExist = config.Descendants("dirPath")
                                     .Any(node => node.Value == path);
 
+
+            /// Jeśli NIE istnieje taka ścieżka w pliku
             if (appSettingsNode != null && !pathExist)
             {
                 appSettingsNode.Add(new XElement("data",
                                         new XElement("dirPath", textBox1.Text),
-                                        new XElement("name", textBox2.Text)));
+                                        new XElement("name", textBox2.Text),
+                                        new XElement("difference", difference.Text),
+                                        xmlRoot));
+
+                foreach(CheckBox chb in checkBoxList)
+                {
+                    if (chb.Checked) { xmlRoot.Add(new XElement("day", chb.Text)); }
+                }
 
                 config.Save("appconfig.xml");
             }
         }
 
 
+        private void difference_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
 
-
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

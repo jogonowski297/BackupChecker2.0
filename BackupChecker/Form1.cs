@@ -76,7 +76,7 @@ namespace BackupChecker
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form_Paths fp = new Form_Paths(config);
+            UC_WinSrv fp = new UC_WinSrv(config);
             addUserControl(fp);
         }
 

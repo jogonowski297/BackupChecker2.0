@@ -50,7 +50,6 @@ C:\Users\jakub.ogonowski\Documents\C#\BackupChecker2.0\BackupChecker\bin\Debug\n
 C:\Users\jakub.ogonowski\Documents\C#\BackupChecker2.0\BackupChecker\obj\Debug\net6.0-windows\BackupChecker.csproj.AssemblyReference.cache
 C:\Users\jakub.ogonowski\Documents\C#\BackupChecker2.0\BackupChecker\obj\Debug\net6.0-windows\BackupChecker.Form1.resources
 C:\Users\jakub.ogonowski\Documents\C#\BackupChecker2.0\BackupChecker\obj\Debug\net6.0-windows\BackupChecker.Properties.Resources.resources
-C:\Users\jakub.ogonowski\Documents\C#\BackupChecker2.0\BackupChecker\obj\Debug\net6.0-windows\BackupChecker.Form_Paths.resources
 C:\Users\jakub.ogonowski\Documents\C#\BackupChecker2.0\BackupChecker\obj\Debug\net6.0-windows\BackupChecker.UserControls.UC_Help.resources
 C:\Users\jakub.ogonowski\Documents\C#\BackupChecker2.0\BackupChecker\obj\Debug\net6.0-windows\BackupChecker.UC_Settings.resources
 C:\Users\jakub.ogonowski\Documents\C#\BackupChecker2.0\BackupChecker\obj\Debug\net6.0-windows\BackupChecker.csproj.GenerateResource.cache
@@ -64,3 +63,4 @@ C:\Users\jakub.ogonowski\Documents\C#\BackupChecker2.0\BackupChecker\obj\Debug\n
 C:\Users\jakub.ogonowski\Documents\C#\BackupChecker2.0\BackupChecker\obj\Debug\net6.0-windows\BackupChecker.pdb
 C:\Users\jakub.ogonowski\Documents\C#\BackupChecker2.0\BackupChecker\obj\Debug\net6.0-windows\BackupChecker.genruntimeconfig.cache
 C:\Users\jakub.ogonowski\Documents\C#\BackupChecker2.0\BackupChecker\obj\Debug\net6.0-windows\ref\BackupChecker.dll
+C:\Users\jakub.ogonowski\Documents\C#\BackupChecker2.0\BackupChecker\obj\Debug\net6.0-windows\BackupChecker.UC_WinSrv.resources

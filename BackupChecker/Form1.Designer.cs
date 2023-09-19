@@ -40,14 +40,14 @@
             button2 = new Button();
             panel2 = new Panel();
             button1 = new Button();
+            panel7 = new Panel();
+            btnHelp = new Button();
             SidebarTimer = new System.Windows.Forms.Timer(components);
             panel5 = new Panel();
             button7 = new Button();
             button6 = new Button();
             button5 = new Button();
             panelContainer = new Panel();
-            panel7 = new Panel();
-            btnHelp = new Button();
             Sidebar.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)menuButton).BeginInit();
@@ -55,8 +55,8 @@
             panel4.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
-            panel5.SuspendLayout();
             panel7.SuspendLayout();
+            panel5.SuspendLayout();
             SuspendLayout();
             // 
             // Sidebar
@@ -186,6 +186,29 @@
             button1.Text = "Home";
             button1.UseVisualStyleBackColor = true;
             // 
+            // panel7
+            // 
+            panel7.Controls.Add(btnHelp);
+            panel7.Location = new Point(3, 304);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(196, 48);
+            panel7.TabIndex = 5;
+            // 
+            // btnHelp
+            // 
+            btnHelp.FlatAppearance.BorderSize = 0;
+            btnHelp.FlatStyle = FlatStyle.Flat;
+            btnHelp.ForeColor = SystemColors.ButtonHighlight;
+            btnHelp.Image = Properties.Resources.heart;
+            btnHelp.ImageAlign = ContentAlignment.MiddleLeft;
+            btnHelp.Location = new Point(14, 4);
+            btnHelp.Name = "btnHelp";
+            btnHelp.Size = new Size(173, 41);
+            btnHelp.TabIndex = 2;
+            btnHelp.Text = "Help";
+            btnHelp.UseVisualStyleBackColor = true;
+            btnHelp.Click += btnHelp_Click;
+            // 
             // SidebarTimer
             // 
             SidebarTimer.Tick += SidebarTimer_Tick;
@@ -247,35 +270,12 @@
             panelContainer.Size = new Size(582, 397);
             panelContainer.TabIndex = 2;
             // 
-            // panel7
-            // 
-            panel7.Controls.Add(btnHelp);
-            panel7.Location = new Point(3, 304);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(196, 48);
-            panel7.TabIndex = 5;
-            // 
-            // btnHelp
-            // 
-            btnHelp.FlatAppearance.BorderSize = 0;
-            btnHelp.FlatStyle = FlatStyle.Flat;
-            btnHelp.ForeColor = SystemColors.ButtonHighlight;
-            btnHelp.Image = Properties.Resources.heart;
-            btnHelp.ImageAlign = ContentAlignment.MiddleLeft;
-            btnHelp.Location = new Point(14, 4);
-            btnHelp.Name = "btnHelp";
-            btnHelp.Size = new Size(173, 41);
-            btnHelp.TabIndex = 2;
-            btnHelp.Text = "Help";
-            btnHelp.UseVisualStyleBackColor = true;
-            btnHelp.Click += btnHelp_Click;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkOliveGreen;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(798, 569);
             Controls.Add(panelContainer);
             Controls.Add(panel5);
             Controls.Add(Sidebar);
@@ -292,8 +292,8 @@
             panel4.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel2.ResumeLayout(false);
-            panel5.ResumeLayout(false);
             panel7.ResumeLayout(false);
+            panel5.ResumeLayout(false);
             ResumeLayout(false);
         }
 
