@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "wvWXqkZMmQSY+cfMiPvphkNHZ2ivqSM+fgzJxWZ0JVatciXtRgMnaXp/IO63l+f4WvkgMiVl3SGvRmd8OzJitA==",
+  "dgSpecHash": "4YRaEdE5cZLuYhlX9z13OoVpEPtdYxW5ehnWYdzvCWyV3XdMr+fB0+WxzsB7MAJ9627bGE10IhsbaEi4seDGFg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jakub.ogonowski\\Documents\\C#\\BackupChecker2.0\\BackupChecker\\BackupChecker.csproj",
+  "projectFilePath": "D:\\C#\\WindowsForms\\BackupChecker\\BackupChecker\\BackupChecker2.0\\BackupChecker\\BackupChecker.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\jakub.ogonowski\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
-    "C:\\Users\\jakub.ogonowski\\.nuget\\packages\\system.configuration.configurationmanager\\7.0.0\\system.configuration.configurationmanager.7.0.0.nupkg.sha512",
-    "C:\\Users\\jakub.ogonowski\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
-    "C:\\Users\\jakub.ogonowski\\.nuget\\packages\\system.security.cryptography.protecteddata\\7.0.0\\system.security.cryptography.protecteddata.7.0.0.nupkg.sha512",
-    "C:\\Users\\jakub.ogonowski\\.nuget\\packages\\system.security.permissions\\7.0.0\\system.security.permissions.7.0.0.nupkg.sha512",
-    "C:\\Users\\jakub.ogonowski\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512"
+    "C:\\Users\\kgwzd\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\kgwzd\\.nuget\\packages\\system.configuration.configurationmanager\\7.0.0\\system.configuration.configurationmanager.7.0.0.nupkg.sha512",
+    "C:\\Users\\kgwzd\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
+    "C:\\Users\\kgwzd\\.nuget\\packages\\system.security.cryptography.protecteddata\\7.0.0\\system.security.cryptography.protecteddata.7.0.0.nupkg.sha512",
+    "C:\\Users\\kgwzd\\.nuget\\packages\\system.security.permissions\\7.0.0\\system.security.permissions.7.0.0.nupkg.sha512",
+    "C:\\Users\\kgwzd\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }

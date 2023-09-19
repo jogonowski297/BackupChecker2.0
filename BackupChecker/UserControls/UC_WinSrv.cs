@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Configuration;
 using System.Xml.Linq;
 using System.Xml;
+using BackupChecker.Data;
 
 namespace BackupChecker
 {
@@ -73,12 +74,23 @@ namespace BackupChecker
                 // Pobierz wartości ścieżki i nazwy
                 string dirPath = dataElement.Element("dirPath").Value;
                 string name = dataElement.Element("name").Value;
+                string difference = dataElement.Element("difference").Value;
+
+                List<string> days = dataElements
+                    .Where(path => path.Element("dirPath").Value == dirPath)
+                    .Descendants("selectedDays")
+                    .Elements("day")
+                    .Select(day => day.Value)
+                    .ToList();
+
+                Data_WinServ dataWinSrv = new Data_WinServ(dirPath, name, difference, days);
+
 
                 // Tworzenie tekstu do wyświetlenia w ListBox
                 string listItemText = $"{dirPath} - {name}";
 
                 // Dodawanie pozycji do ListBox
-                listBox1.Items.Add(listItemText);
+                listBox1.Items.Add(dataWinSrv);
             }
         }
 
@@ -111,6 +123,8 @@ namespace BackupChecker
                 ChBSu
             };
 
+            List<string> days = new List<string>();
+
 
             /// sprawdzanie czy istnieje taka sama sciezka w pliku 
             bool pathExist = config.Descendants("dirPath")
@@ -126,9 +140,13 @@ namespace BackupChecker
                                         new XElement("difference", difference.Text),
                                         xmlRoot));
 
-                foreach(CheckBox chb in checkBoxList)
+                foreach (CheckBox chb in checkBoxList)
                 {
-                    if (chb.Checked) { xmlRoot.Add(new XElement("day", chb.Text)); }
+                    if (chb.Checked)
+                    {
+                        xmlRoot.Add(new XElement("day", chb.Text));
+                        days.Add(chb.Text);
+                    }
                 }
 
                 config.Save("appconfig.xml");
@@ -148,6 +166,23 @@ namespace BackupChecker
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selectedIndex = listBox1.SelectedIndex;
+            if (selectedIndex >= 0)
+            {
+                Data_WinServ selectedObject = (Data_WinServ)listBox1.SelectedItem;
+
+                if (selectedObject != null)
+                {
+                    string imie = selectedObject.dirPath;
+                    string wiek = selectedObject.name;
+                    List<string> list = selectedObject.days;
+
+                }
             }
         }
     }

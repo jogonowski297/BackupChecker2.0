@@ -14,4 +14,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BackupChecker
-build_property.ProjectDir = C:\Users\jakub.ogonowski\Documents\C#\BackupChecker2.0\BackupChecker\
+build_property.ProjectDir = D:\C#\WindowsForms\BackupChecker\BackupChecker\BackupChecker2.0\BackupChecker\
