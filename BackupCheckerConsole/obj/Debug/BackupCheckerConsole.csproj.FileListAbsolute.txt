@@ -1,0 +1,7 @@
+C:\Users\jakub.ogonowski\Documents\C#\BackupChecker2.0\BackupCheckerConsole\bin\Debug\BackupCheckerConsole.exe.config
+C:\Users\jakub.ogonowski\Documents\C#\BackupChecker2.0\BackupCheckerConsole\bin\Debug\BackupCheckerConsole.exe
+C:\Users\jakub.ogonowski\Documents\C#\BackupChecker2.0\BackupCheckerConsole\bin\Debug\BackupCheckerConsole.pdb
+C:\Users\jakub.ogonowski\Documents\C#\BackupChecker2.0\BackupCheckerConsole\obj\Debug\BackupCheckerConsole.csproj.AssemblyReference.cache
+C:\Users\jakub.ogonowski\Documents\C#\BackupChecker2.0\BackupCheckerConsole\obj\Debug\BackupCheckerConsole.csproj.CoreCompileInputs.cache
+C:\Users\jakub.ogonowski\Documents\C#\BackupChecker2.0\BackupCheckerConsole\obj\Debug\BackupCheckerConsole.exe
+C:\Users\jakub.ogonowski\Documents\C#\BackupChecker2.0\BackupCheckerConsole\obj\Debug\BackupCheckerConsole.pdb

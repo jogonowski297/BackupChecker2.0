@@ -97,3 +97,6 @@ D:\C#\WindowsForms\BackupChecker\BackupChecker\BackupChecker2.0\BackupChecker\ob
 D:\C#\WindowsForms\BackupChecker\BackupChecker\BackupChecker2.0\BackupChecker\obj\Debug\net6.0-windows\BackupChecker.pdb
 D:\C#\WindowsForms\BackupChecker\BackupChecker\BackupChecker2.0\BackupChecker\obj\Debug\net6.0-windows\BackupChecker.genruntimeconfig.cache
 D:\C#\WindowsForms\BackupChecker\BackupChecker\BackupChecker2.0\BackupChecker\obj\Debug\net6.0-windows\ref\BackupChecker.dll
+C:\Users\jakub.ogonowski\Documents\C#\BackupChecker2.0\BackupChecker\bin\Debug\net6.0-windows\BackupCheckerConsole.exe
+C:\Users\jakub.ogonowski\Documents\C#\BackupChecker2.0\BackupChecker\bin\Debug\net6.0-windows\BackupCheckerConsole.pdb
+C:\Users\jakub.ogonowski\Documents\C#\BackupChecker2.0\BackupChecker\bin\Debug\net6.0-windows\BackupCheckerConsole.exe.config

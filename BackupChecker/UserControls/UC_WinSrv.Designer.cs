@@ -50,11 +50,13 @@
             label2 = new Label();
             label1 = new Label();
             colorDialog1 = new ColorDialog();
+            button2 = new Button();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel2
             // 
+            panel2.Controls.Add(button2);
             panel2.Controls.Add(difference);
             panel2.Controls.Add(label6);
             panel2.Controls.Add(ChBSu);
@@ -264,6 +266,16 @@
             label1.TabIndex = 0;
             label1.Text = "Kopia Windows-Servers";
             // 
+            // button2
+            // 
+            button2.Location = new Point(398, 192);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 19;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // UC_WinSrv
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -299,5 +311,6 @@
         private CheckBox ChBTh;
         private CheckBox ChBWe;
         private CheckBox ChBTu;
+        private Button button2;
     }
 }

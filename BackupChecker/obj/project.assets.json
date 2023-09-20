@@ -131,6 +131,15 @@
             "rid": "win"
           }
         }
+      },
+      "BackupCheckerConsole/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/BackupCheckerConsole.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BackupCheckerConsole.dll": {}
+        }
       }
     }
   },
@@ -316,27 +325,40 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "BackupCheckerConsole/1.0.0": {
+      "type": "project",
+      "path": "../BackupCheckerConsole/BackupCheckerConsole.csproj",
+      "msbuildProject": "../BackupCheckerConsole/BackupCheckerConsole.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
+      "BackupCheckerConsole >= 1.0.0",
       "System.Configuration.ConfigurationManager >= 7.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kgwzd\\.nuget\\packages\\": {}
+    "C:\\Users\\jakub.ogonowski\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#\\WindowsForms\\BackupChecker\\BackupChecker\\BackupChecker2.0\\BackupChecker\\BackupChecker.csproj",
+      "projectUniqueName": "C:\\Users\\jakub.ogonowski\\Documents\\C#\\BackupChecker2.0\\BackupChecker\\BackupChecker.csproj",
       "projectName": "BackupChecker",
-      "projectPath": "D:\\C#\\WindowsForms\\BackupChecker\\BackupChecker\\BackupChecker2.0\\BackupChecker\\BackupChecker.csproj",
-      "packagesPath": "C:\\Users\\kgwzd\\.nuget\\packages\\",
-      "outputPath": "D:\\C#\\WindowsForms\\BackupChecker\\BackupChecker\\BackupChecker2.0\\BackupChecker\\obj\\",
+      "projectPath": "C:\\Users\\jakub.ogonowski\\Documents\\C#\\BackupChecker2.0\\BackupChecker\\BackupChecker.csproj",
+      "packagesPath": "C:\\Users\\jakub.ogonowski\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jakub.ogonowski\\Documents\\C#\\BackupChecker2.0\\BackupChecker\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\kgwzd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jakub.ogonowski\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -349,7 +371,11 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\jakub.ogonowski\\Documents\\C#\\BackupChecker2.0\\BackupCheckerConsole\\BackupCheckerConsole.csproj": {
+              "projectPath": "C:\\Users\\jakub.ogonowski\\Documents\\C#\\BackupChecker2.0\\BackupCheckerConsole\\BackupCheckerConsole.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -386,7 +412,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

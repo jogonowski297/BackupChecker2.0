@@ -11,6 +11,7 @@ using System.Configuration;
 using System.Xml.Linq;
 using System.Xml;
 using BackupChecker.Data;
+using BackupCheckerConsole;
 
 namespace BackupChecker
 {
@@ -18,11 +19,24 @@ namespace BackupChecker
     {
         XDocument config;
 
+        List<CheckBox> checkBoxList;
+
         public UC_WinSrv(XDocument config)
         {
             InitializeComponent();
 
             this.config = config;
+
+            checkBoxList = new List<CheckBox>
+            {
+                ChBMo,
+                ChBTu,
+                ChBWe,
+                ChBTh,
+                ChBFr,
+                ChBSa,
+                ChBSu
+            };
 
             LoadToList();
 
@@ -66,6 +80,8 @@ namespace BackupChecker
 
         private void LoadToList()
         {
+            listBox1.Items.Clear();
+
             var dataElements = config.Descendants("data");
 
             // Iteruj przez elementy "data"
@@ -84,10 +100,6 @@ namespace BackupChecker
                     .ToList();
 
                 Data_WinServ dataWinSrv = new Data_WinServ(dirPath, name, difference, days);
-
-
-                // Tworzenie tekstu do wyświetlenia w ListBox
-                string listItemText = $"{dirPath} - {name}";
 
                 // Dodawanie pozycji do ListBox
                 listBox1.Items.Add(dataWinSrv);
@@ -112,45 +124,52 @@ namespace BackupChecker
 
             XElement xmlRoot = new XElement("selectedDays");
 
-            List<CheckBox> checkBoxList = new List<CheckBox>
-            {
-                ChBMo,
-                ChBTu,
-                ChBWe,
-                ChBTh,
-                ChBFr,
-                ChBSa,
-                ChBSu
-            };
-
             List<string> days = new List<string>();
 
 
-            /// sprawdzanie czy istnieje taka sama sciezka w pliku 
+            /// sprawdzanie czy istnieje taka sama sciezka
             bool pathExist = config.Descendants("dirPath")
                                     .Any(node => node.Value == path);
 
 
-            /// Jeśli NIE istnieje taka ścieżka w pliku
-            if (appSettingsNode != null && !pathExist)
+
+            if (appSettingsNode != null)
             {
-                appSettingsNode.Add(new XElement("data",
+                /// Jeśli NIE istnieje taka ścieżka 
+                if (!pathExist)
+                {
+                    appSettingsNode.Add(new XElement("data",
                                         new XElement("dirPath", textBox1.Text),
                                         new XElement("name", textBox2.Text),
                                         new XElement("difference", difference.Text),
                                         xmlRoot));
 
-                foreach (CheckBox chb in checkBoxList)
-                {
-                    if (chb.Checked)
+                    foreach (CheckBox chb in checkBoxList)
                     {
-                        xmlRoot.Add(new XElement("day", chb.Text));
-                        days.Add(chb.Text);
+                        if (chb.Checked)
+                        {
+                            xmlRoot.Add(new XElement("day", chb.Text));
+                            days.Add(chb.Text);
+                        }
                     }
+
+
+                }
+                /// Jeśli istnieje taka ścieżka 
+                else
+                {
+                    var dataElements = config.Descendants("data");
+
+                    XElement oldName = dataElements.Where(p => p.Element("dirPath").Value == path).Elements("name").First();
+                    oldName.Value = textBox2.Text;
                 }
 
                 config.Save("appconfig.xml");
             }
+
+            LoadToList();
+
+
         }
 
 
@@ -178,12 +197,31 @@ namespace BackupChecker
 
                 if (selectedObject != null)
                 {
-                    string imie = selectedObject.dirPath;
-                    string wiek = selectedObject.name;
-                    List<string> list = selectedObject.days;
+                    textBox1.Text = selectedObject.dirPath;
+                    textBox2.Text = selectedObject.name;
+                    difference.Text = selectedObject.difference;
+
+
+                    foreach (CheckBox chb in checkBoxList)
+                    {
+                        if (selectedObject.days.Contains(chb.Text))
+                        {
+                            chb.Checked = true;
+                        }
+                        else
+                        {
+                            chb.Checked = false;
+                        }
+                    }
+
 
                 }
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

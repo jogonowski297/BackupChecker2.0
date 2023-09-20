@@ -13,7 +13,7 @@
       <ssl></ssl>
     </settings>
     <directory>
-	   <data>
+      <data>
         <dirPath>C:\Users\jakub.ogonowski\Documents\Visual Studio 2008</dirPath>
         <name>VS2008</name>
         <difference>3</difference>
@@ -27,18 +27,17 @@
           <day>Niedziela</day>
         </selectedDays>
       </data>
-		<data>
-			<dirPath>C:\Users\jakub.ogonowski\Documents\Visual Studio 2012</dirPath>
-			<name>VS2012</name>
-			<difference>3</difference>
-			<selectedDays>
-				<day>Poniedziałek</day>
-				<day>Wtorek</day>
-				<day>Środa</day>
-				<day>Czwartek</day>
-
-			</selectedDays>
-		</data>
+      <data>
+        <dirPath>C:\Users\jakub.ogonowski\Documents\Visual Studio 2012</dirPath>
+        <name>VS2012</name>
+        <difference>3</difference>
+        <selectedDays>
+          <day>Poniedziałek</day>
+          <day>Wtorek</day>
+          <day>Środa</day>
+          <day>Czwartek</day>
+        </selectedDays>
+      </data>
     </directory>
   </appSettings>
 </configuration>
