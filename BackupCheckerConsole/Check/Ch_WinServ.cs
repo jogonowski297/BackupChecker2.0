@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
+
+
 namespace BackupCheckerConsole.Check
 {
     internal class Ch_WinServ
@@ -47,6 +49,7 @@ namespace BackupCheckerConsole.Check
                 if(CheckPathExist(path))
                 {
                     DirectoryInfo directoryInfo = new DirectoryInfo(path.Value);
+                    
                     
                 }
             }

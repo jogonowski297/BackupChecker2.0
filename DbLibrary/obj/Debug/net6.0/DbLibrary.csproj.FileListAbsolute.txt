@@ -1,0 +1,12 @@
+D:\C#\WindowsForms\BackupChecker\BackupChecker\BackupChecker2.0\DbLibrary\bin\Debug\net6.0\DbLibrary.deps.json
+D:\C#\WindowsForms\BackupChecker\BackupChecker\BackupChecker2.0\DbLibrary\bin\Debug\net6.0\DbLibrary.dll
+D:\C#\WindowsForms\BackupChecker\BackupChecker\BackupChecker2.0\DbLibrary\bin\Debug\net6.0\DbLibrary.pdb
+D:\C#\WindowsForms\BackupChecker\BackupChecker\BackupChecker2.0\DbLibrary\obj\Debug\net6.0\DbLibrary.csproj.AssemblyReference.cache
+D:\C#\WindowsForms\BackupChecker\BackupChecker\BackupChecker2.0\DbLibrary\obj\Debug\net6.0\DbLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\WindowsForms\BackupChecker\BackupChecker\BackupChecker2.0\DbLibrary\obj\Debug\net6.0\DbLibrary.AssemblyInfoInputs.cache
+D:\C#\WindowsForms\BackupChecker\BackupChecker\BackupChecker2.0\DbLibrary\obj\Debug\net6.0\DbLibrary.AssemblyInfo.cs
+D:\C#\WindowsForms\BackupChecker\BackupChecker\BackupChecker2.0\DbLibrary\obj\Debug\net6.0\DbLibrary.csproj.CoreCompileInputs.cache
+D:\C#\WindowsForms\BackupChecker\BackupChecker\BackupChecker2.0\DbLibrary\obj\Debug\net6.0\DbLibrary.dll
+D:\C#\WindowsForms\BackupChecker\BackupChecker\BackupChecker2.0\DbLibrary\obj\Debug\net6.0\refint\DbLibrary.dll
+D:\C#\WindowsForms\BackupChecker\BackupChecker\BackupChecker2.0\DbLibrary\obj\Debug\net6.0\DbLibrary.pdb
+D:\C#\WindowsForms\BackupChecker\BackupChecker\BackupChecker2.0\DbLibrary\obj\Debug\net6.0\ref\DbLibrary.dll
